@@ -1,0 +1,23 @@
+<!-- <br />
+First Name : <input type="text" [(ngModel)]="firstName" /><br /><br />
+Email : <input type="email" [(ngModel)]="email" /><br /><br />
+<button class="btn btn-primary">Update</button> -->
+
+<div class="container">
+  <div class="row" *ngIf="firstName.length != 0">
+    <div class="col-md-4"></div>
+
+    <div class="col-md-4">
+      <div class="mb-3">
+        First Name: <input type="text" [(ngModel)]="firstName" class="form-control"/>
+      </div>
+      <div class="mb-3">
+        Email: <input type="text" [(ngModel)]="email" class="form-control" />
+      </div>
+
+      <button class="btn btn-success" (click)="updateUser()">Update</button><br />
+    </div>
+
+    <div class="col-md-4"></div>
+  </div>
+</div>

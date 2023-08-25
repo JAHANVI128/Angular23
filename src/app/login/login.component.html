@@ -1,0 +1,25 @@
+<div class="container">
+    <!-- <p>Login</p> -->
+  
+    <!-- {{x}} string interpolation   -->
+  
+    <div class="row">
+      <div class="col-md-4"></div>
+  
+      <div class="col-md-4">
+        <div class="mb-3">
+          Email:<input type="text" [(ngModel)]="email" class="form-control" />
+        </div>
+  
+        <div class="mb-3">
+          Password:<input type="password" [(ngModel)]="password" class="form-control"/>
+        </div>
+        <button (click)="login()" class="btn btn-success">Login</button><br />
+  
+        <a routerLink="/signup">Signup</a>
+      </div>
+  
+      <div class="col-md-4"></div>
+    </div>
+  </div>
+  

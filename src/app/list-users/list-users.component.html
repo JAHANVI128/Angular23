@@ -24,9 +24,19 @@
             <span style="text-decoration: underline; color: blue; cursor: pointer;" (click)="viewUser(user._id)">
               View
             </span>|
+            <p-button (click)="showDialog(user._id)" styleClass="style" label="View"></p-button>
           </td>
         </tr>
       </tbody>
     </table>
   </div>
 </div>
+
+<p-dialog header="User Data" [(visible)]="visible" [style]="{width: '50vw'}">
+  <p>
+    {{uId}}<br>
+    {{firstName}}   
+    <br>
+    {{email}}
+  </p>
+</p-dialog>

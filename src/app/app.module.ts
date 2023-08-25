@@ -16,6 +16,7 @@ import { ListUsersComponent } from './list-users/list-users.component'
 
 import { DialogModule } from 'primeng/dialog';
 import { ButtonModule } from 'primeng/button';
+import { EditUserComponent } from './edit-user/edit-user.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { ButtonModule } from 'primeng/button';
     SignupComponent,
     LoginComponent,
     HomeComponent,
-    ListUsersComponent
+    ListUsersComponent,
+    EditUserComponent
   ],
   imports: [
     BrowserModule,

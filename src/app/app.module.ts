@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
@@ -17,6 +17,7 @@ import { ListUsersComponent } from './list-users/list-users.component'
 import { DialogModule } from 'primeng/dialog';
 import { ButtonModule } from 'primeng/button';
 import { EditUserComponent } from './edit-user/edit-user.component';
+import { ReactiveSignupComponent } from './reactive-signup/reactive-signup.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { EditUserComponent } from './edit-user/edit-user.component';
     LoginComponent,
     HomeComponent,
     ListUsersComponent,
-    EditUserComponent
+    EditUserComponent,
+    ReactiveSignupComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +38,8 @@ import { EditUserComponent } from './edit-user/edit-user.component';
     DialogModule,
     ButtonModule,
     ToastrModule.forRoot(),
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

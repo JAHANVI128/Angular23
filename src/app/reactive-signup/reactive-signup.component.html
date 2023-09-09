@@ -1,0 +1,23 @@
+<!-- <p>reactive-signup works!</p> -->
+
+<form [formGroup]="myForm" (ngSubmit)="saveUser()">
+  <div class="row">
+    <div class="col-md-4"></div>
+
+    <div class="col-md-4">
+      First Name :
+      <input type="text" formControlName="firstName" />
+      <br /><br />
+      Email:
+      <input type="email" formControlName="email" />
+      <br /><br />
+      Password:
+      <input type="password" formControlName="password" />
+      <br /><br />
+
+      <input type="submit" value="Signup" />
+    </div>
+
+    <div class="col-md-4"></div>
+  </div>
+</form>

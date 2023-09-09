@@ -5,6 +5,7 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { ListUsersComponent } from './list-users/list-users.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
+import { ReactiveSignupComponent } from './reactive-signup/reactive-signup.component';
 
 const routes: Routes = [{
   path:"signup",
@@ -24,6 +25,9 @@ const routes: Routes = [{
 },{
   path:"edituser/:userId",
   component:EditUserComponent
+},{
+  path:"signup2",
+  component:ReactiveSignupComponent
 }];
 
 @NgModule({

@@ -26,19 +26,24 @@ export class ReactiveSignupComponent {
 
   emailVaild(control:AbstractControl){
 
-    // console.log(control.value);
-
-    if(control.value.endsWith("@gmail.com")){
-
+    console.log("->"+control.hasError("required"));
+    if(control.hasError('required')){
+      console.log("ignore")
       return{
-        emailInvalid : false
+        emailInvalid : false 
       }
     }else{
-      return{
-        emailInvalid : true
+      if(control.value.endsWith("@gmail.com") && control.value.length > 11){
+        console.log("hit");
+        return{
+          emailInvalid : false 
+        }
+      }else{
+        console.log("success");
+        return{
+          emailInvalid : true
+        }
       }
     }
-
   }
-
 }

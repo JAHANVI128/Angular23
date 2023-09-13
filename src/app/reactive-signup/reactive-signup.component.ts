@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, FormControl, FormGroup, ValidationErrors, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-reactive-signup',
@@ -13,14 +13,32 @@ export class ReactiveSignupComponent {
   constructor(){
     this.myForm = new FormGroup({
       firstName : new FormControl("",Validators.required),
-      email : new FormControl("",Validators.required),
-      password : new FormControl("",Validators.required)
+      // email : new FormControl("",[Validators.required, Validators.email]),
+      email : new FormControl("",[Validators.required, this.emailVaild]),
+      password : new FormControl("",[Validators.required, Validators.minLength(8)])
     })
   }
 
   saveUser(){
     console.log(this.myForm.value);
     console.log(this.myForm.valid);
+  }
+
+  emailVaild(control:AbstractControl){
+
+    // console.log(control.value);
+
+    if(control.value.endsWith("@gmail.com")){
+
+      return{
+        emailInvalid : false
+      }
+    }else{
+      return{
+        emailInvalid : true
+      }
+    }
+
   }
 
 }
